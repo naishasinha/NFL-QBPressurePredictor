@@ -1,1 +1,1 @@
-# NFLGameAnalysis-ComputerVision
+# Computer Vision Analysis of NFL Game Footage
