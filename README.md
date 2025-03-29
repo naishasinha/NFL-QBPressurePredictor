@@ -1,6 +1,7 @@
 <div align="center">
   
-# NFL Quarterback Pressure Probability Tracker
+# NFL Quarterback Pressure Predictor: ML-Based Analysis of Defensive Engagement
+
 ***
 ![giphy](https://github.com/user-attachments/assets/6106f50a-7eba-4f9a-b369-1534a6b2abf1)
 ***
@@ -8,7 +9,7 @@
 
 
 ## Objective
-To develop a real-time predictive model and dashboard that can:
+To develop a real-time predictive Machine Learning model and dashboard that can:
 - Analyze tracking data on a 0.1-second level
 - Estimate the probability of QB pressure based on player movement
 - Visualize pressure likelihood during live plays
@@ -38,6 +39,9 @@ qb-pressure-tracker/
 │   └── dashboard.py
 │
 ├── tests/                   # Unit tests for code modules
+│   ├── test_features.py     # Tests feature engineering (distance to QB)
+│   ├── test_labeling.py     # Tests labeling logic (pressure events)
+│   └── test_model.py        # Test model training and evaluation
 │
 ├── README.md                # Project overview and setup
 ├── requirements.txt         # Python dependencies
