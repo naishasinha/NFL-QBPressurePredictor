@@ -13,7 +13,7 @@ To develop a real-time predictive model and dashboard that can:
 - Estimate the probability of QB pressure based on player movement
 - Visualize pressure likelihood during live plays
 
-NFL coaches care about pressure situations because they directly impact QB performance. This tool (made for demostration purposes only) was developed to quantify and explore how likely a QB is to be pressured in real-time can help evaluate O-line performance, design plays that minimize pressure risk, and assess defensive effectiveness.
+NFL coaches care about pressure situations because they directly impact QB performance. This tool (**_made for demostration and learning purposes only_**) was developed to quantify and explore how likely a QB is to be pressured in real-time can help evaluate O-line performance, design plays that minimize pressure risk, and assess defensive effectiveness.
 
 ## Repository Structure
 ```
