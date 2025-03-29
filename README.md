@@ -9,7 +9,7 @@
 
 ## Objective
 To develop a real-time predictive model and dashboard that can:
-- Analyze tracking data on a 0.1-second level
+- Analyze granular tracking data on a 0.1-second level
 - Estimate the probability of QB pressure based on player movement
 - Visualize pressure likelihood during live plays
 
