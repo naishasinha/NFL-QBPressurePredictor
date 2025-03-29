@@ -1,6 +1,6 @@
 <div align="center">
   
-# Computer Vision Analysis of NFL Game Footage
+# NFL Quarterback Pressure Probability Tracker
 ***
 ![giphy](https://github.com/user-attachments/assets/6106f50a-7eba-4f9a-b369-1534a6b2abf1)
 ***
