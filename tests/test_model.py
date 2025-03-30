@@ -12,19 +12,25 @@ from src.data_loader import load_tracking_week, load_players_data
 from src.feature_utils import get_qb_distance_features
 from src.labeling import label_pressure_events
 from src.model import extract_play_level_features, train_and_evaluate_model
+from src.data_loader import load_all_tracking_weeks
+
 
 # Load data
 print("Loading week 1 tracking data...")
-tracking_df = load_tracking_week(1)
+tracking_df = load_all_tracking_weeks(weeks=range(1, 4))  # Load all weeks for a larger dataset
+print("Plays loaded:", tracking_df[['gameId', 'playId']].drop_duplicates().shape[0])  # Check number of unique plays
+
 players_df = load_players_data()
 
 # Generate features for the entire dataset (feature engineering)
 print("Generating distance features...")
 features_df = get_qb_distance_features(tracking_df, players_df)
+print("Number of unique plays:", features_df[['gameId', 'playId']].drop_duplicates().shape[0])
 
 # Label the plays based on pressure events (labeling)
 print("Labeling pressure events...")
 labeled_df = label_pressure_events(features_df)
+print(labeled_df['pressure'].value_counts())
 
 # Extract play-level features for modeling
 print("Extracting play-level features...")

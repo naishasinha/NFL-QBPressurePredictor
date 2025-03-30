@@ -7,10 +7,11 @@ Pressure Heuristic:
 
 import pandas as pd
 
-def label_pressure_events(tracking_df, threshold_yards=1.5, window_frames=25):
+def label_pressure_events(tracking_df, threshold_yards=1.0, window_frames=20):
     """
     Labels each (gameId, playId) as a pressure play if any defender is
     within threshold_yards of the quarterback within a specified window of frames (2.5 seconds).
+    Can change based on parameters.
 
     Parameters:
         - tracking_df (pd.DataFrame): Tracking data with distanceToQB and position columns
@@ -32,7 +33,7 @@ def label_pressure_events(tracking_df, threshold_yards=1.5, window_frames=25):
         defenders = group[group['team'] != qb_team]
 
         # Check if any defender is within  threshold distance to the QB
-        pressure = int((defenders['distanceToQB'] <= threshold_yards).any())
+        pressure = int((defenders['distanceToQB'] < threshold_yards).any())
 
         pressure_labels.append({
             'gameId': gameId,
